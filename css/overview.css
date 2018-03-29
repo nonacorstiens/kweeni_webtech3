@@ -90,7 +90,7 @@ header .profile img {
 	display: grid;
 	grid-template-rows: auto auto auto;
 	grid-row-gap: 25px;
-
+    background-color: #FDF6F7;
 	padding: 30px 20px;
 }
 
@@ -128,12 +128,16 @@ header .profile img {
 .likes{
   background-color: #FCEFF0;
   display: grid;
-  grid-template-columns: 1fr 1fr 25% 45%;
+  grid-template-columns: 10% 10% 20% 20% 30% 10%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100px;
+    font-size: 0.8em;
     grid-gap: 10px;
+   
 }
 
 .likes img{
-    width: 30px;
+    width: 25px;
     border-radius: 3px;
 }
 
@@ -144,45 +148,73 @@ header .profile img {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    height: 100px;
 }
 .likes .likes__question img{
     width: 30px;
     grid-column: 2;
+    grid-row: 2;
     margin: 2px;
 }
 
 .likes .likes__question p{
     width: 30px;
     grid-column: 3;
+    grid-row: 2;
     color: #4F47DB;
     margin: 2px;
     font-size: 140%;
 }
 .likes .likes__question a{
-    grid-column: 1/4;
-    justify-items: center;
+    grid-column: 1/5;
+    grid-row: 3;
+    justify-self: center;
+    text-decoration: underline;
 }
 
 .likes .likes__pictures{
     display: grid;
     grid-column: 3/4;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(9, minmax(30px, 1fr));
     align-self: center;
+    grid-row-gap: 5px;
 }
+
 .likes .likes__update{
-    grid-column: 4/5;
+    grid-column: 5;
     display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+     grid-row-gap: 5px;
+    grid-column-gap: 10px;
+}
+
+.likes .likes__update .minutes{
+    font-style: italic;
 }
 .likes .likes__update p{
-    grid-column: 1/2;
-    align-content: center;
-    justify-content: flex-end;
+    text-align: right;
+    color: #fa5b33;
+}
+.likes .likes__update img{
+    grid-column: 2;
+    grid-row: 2/4;
+    align-self: center;
+}
+
+.likes .likes__update--minutes{
+    grid-row: 2;
+    align-self: flex-end;
+}
+
+.likes .likes__update--name{
+    grid-row: 3;
+    font-weight: bold;
+    align-self: flex-start;
 }
 .hot {
 	padding: 0px 7px;
